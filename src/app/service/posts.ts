@@ -23,3 +23,14 @@ export async function getFeaturedPosts(): Promise<Post[]> {
 export async function getNonFeaturedPosts(): Promise<Post[]> {
   return getAllPosts().then((posts) => posts.filter((post) => !post.featured));
 }
+
+export async function getCategories(): Promise<string[]> {
+  return getAllPosts().then((posts) => {
+    const categories = posts
+      .map((post) => post.category)
+      .filter((value, index, self) => {
+        return self.indexOf(value) === index;
+      });
+    return categories;
+  });
+}
