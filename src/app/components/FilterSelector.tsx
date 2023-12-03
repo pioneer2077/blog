@@ -1,5 +1,6 @@
 import React, { Dispatch, MouseEventHandler, SetStateAction } from "react";
 import { ALL_POSTS } from "./FilteredPost";
+
 type Props = {
   selectedFeature: string;
   filteredCategories: string[];

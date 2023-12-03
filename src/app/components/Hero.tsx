@@ -13,7 +13,7 @@ export default function Hero() {
         src={profileImage}
         priority
       ></Image>
-      <h2 className="text-3xl font-bold mt-2">{"Hi, im lucy"}</h2>
+      <h2 className="text-3xl font-bold mt-2 ">{"Hi, im lucy"}</h2>
       <h3 className="text-xl font-semibold">Full-stack Engineer</h3>
       <p>꿈을 향해 달려가는 사람</p>
       <Link href={"/contact"}>
