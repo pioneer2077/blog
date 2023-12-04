@@ -1,6 +1,4 @@
 import { sendEmail } from "@/app/service/email";
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import * as yup from "yup";
 
 const bodySchema = yup.object().shape({
@@ -10,7 +8,6 @@ const bodySchema = yup.object().shape({
 });
 export async function POST(req: Request) {
   const body = await req.json();
-  console.log({ 그냥바디: req.body, async바디: body });
   if (!bodySchema.isValidSync(body)) {
     return new Response(JSON.stringify({ message: "메일 전송 실패" }));
   } //적절한 포맷인지 확인

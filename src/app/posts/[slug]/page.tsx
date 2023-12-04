@@ -1,13 +1,9 @@
-import MarkDownViewer from "@/app/components/MarkDownViewer";
 import Image from "next/image";
 import { getPostData } from "@/app/service/posts";
 import React from "react";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { AiTwotoneCalendar } from "react-icons/ai";
-import BackAndForthPosts from "@/app/components/BackAndForthPosts";
 import PostContent from "@/app/components/PostContent";
 import AdjacentPostCard from "@/app/components/AdjacentPostCard";
+import { Metadata } from "next";
 type Props = {
   params: {
     slug: string;
@@ -32,4 +28,13 @@ export default async function PostPage({ params: { slug } }: Props) {
       </section>
     </article>
   );
+}
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
+  };
 }
