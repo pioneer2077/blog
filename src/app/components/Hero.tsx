@@ -15,7 +15,7 @@ export default function Hero() {
       ></Image>
       <h2 className="text-3xl font-bold mt-2 ">용환</h2>
       <h3 className="text-xl font-semibold">Full-stack Engineer</h3>
-      <p>꿈을 향해 달려가는 사람. edge runner</p>
+      <p>꿈을 향해 달려가는 사람</p>
       <Link href={"/contact"}>
         <button className="bg-yellow-500 font-bold rounded py-1 px-4 mt-2">
           Contact Me
