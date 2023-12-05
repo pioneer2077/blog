@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../../../public/images/rabbit.png";
+import profileImage from "../../../public/images/yonghwan.png";
 import Image from "next/image";
 import Link from "next/link";
 export default function Hero() {
@@ -14,8 +14,8 @@ export default function Hero() {
         priority
       ></Image>
       <h2 className="text-3xl font-bold mt-2 ">용환</h2>
-      <h3 className="text-xl font-semibold">Full-stack Engineer</h3>
-      <p>꿈을 향해 달려가는 사람</p>
+      <h3 className="text-xl font-semibold">프론트엔드 개발자</h3>
+      <p>이 사이트는 Next.JS 13 버전으로 만들어져있습니다</p>
       <Link href={"/contact"}>
         <button className="bg-yellow-500 font-bold rounded py-1 px-4 mt-2">
           Contact Me

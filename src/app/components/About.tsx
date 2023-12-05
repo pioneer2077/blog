@@ -6,7 +6,7 @@ export default function About() {
       <h2 className={TITLE_CLASS}>Who Am I?</h2>
       <p>
         개발이 천직인 프론트엔드 개발자 <br />
-        user experience의 증진을 꿈꿈
+        User Experience의 향상을 최우선으로 생각합니다
       </p>
       <h2 className={TITLE_CLASS}>Career</h2>
       <p className="">Tim Solution{"(~2023)"}</p>
